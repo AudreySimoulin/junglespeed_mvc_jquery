@@ -27,6 +27,8 @@ public class Joueur implements Serializable {
 
     private String nom;
 
+    private Integer nbCartes;
+
     @ManyToOne
     @JoinColumn(name = "PARTIE_ID")
     private Partie partie;
@@ -36,6 +38,14 @@ public class Joueur implements Serializable {
     }
 
     public Joueur() {
+    }
+
+    public Integer getNbCartes() {
+        return nbCartes;
+    }
+
+    public void setNbCartes(Integer nbCartes) {
+        this.nbCartes = nbCartes;
     }
 
     public String getNom() {

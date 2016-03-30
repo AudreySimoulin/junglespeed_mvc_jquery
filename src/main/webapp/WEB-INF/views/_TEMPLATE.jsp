@@ -36,24 +36,6 @@
                 });
             }
 
-            function ajouterFilm() {
-                $('.content').load(urlAppli + '/film/ajouter', $('form').serialize());
-            }
-
-//            function ajouterFilm(){
-//                $.post( urlAppli + '/film/ajouter', $('form').serialize() ,function(data){
-//                    
-//                    chargeContenu('/film/lister');
-//                });
-//            }
-
-            function ajouterGenre() {
-                $.post(urlAppli + '/genre/ajouter', $('form').serialize(), function (data) {
-
-                    $('.content').html(data);
-                });
-            }
-
             function chargeContenu(route) {
 
                 $(".content").load(urlAppli + route);
@@ -69,6 +51,7 @@
             <c:import url="_MENU.jsp" />
         </div>
         <div class="content"> 
+            coucou
         </div>
         <div class="footer">
             <c:import url="_FOOTER.jsp"/>

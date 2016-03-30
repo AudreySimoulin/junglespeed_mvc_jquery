@@ -6,6 +6,7 @@
 package junglespeed.entity;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -28,17 +29,27 @@ public class Partie implements Serializable {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Integer nbTours;
+
     @Enumerated(EnumType.STRING)
     private StatutPartie statutPartie;
 
     @OneToMany(mappedBy = "partie")
-    private List<Joueur> joueurs;
+    private List<Joueur> joueurs = new ArrayList<>();
 
     public Partie(StatutPartie statutPartie) {
         this.statutPartie = statutPartie;
     }
 
     public Partie() {
+    }
+
+    public Integer getNbTours() {
+        return nbTours;
+    }
+
+    public void setNbTours(Integer nbTours) {
+        this.nbTours = nbTours;
     }
 
     public StatutPartie getStatutPartie() {
