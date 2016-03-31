@@ -29,15 +29,31 @@ public class Joueur implements Serializable {
 
     private Integer nbCartes;
 
+    private String couleur;
+
     @ManyToOne
     @JoinColumn(name = "PARTIE_ID")
     private Partie partie;
+
+    public Joueur(String nom, Integer nbCartes, Partie partie) {
+        this.nom = nom;
+        this.nbCartes = nbCartes;
+        this.partie = partie;
+    }
 
     public Joueur(String nom) {
         this.nom = nom;
     }
 
     public Joueur() {
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
     }
 
     public Integer getNbCartes() {

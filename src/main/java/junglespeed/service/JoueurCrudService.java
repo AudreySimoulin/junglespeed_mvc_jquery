@@ -5,6 +5,7 @@
  */
 package junglespeed.service;
 
+import java.util.List;
 import junglespeed.entity.Joueur;
 import org.springframework.data.repository.CrudRepository;
 
@@ -14,4 +15,7 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface JoueurCrudService extends CrudRepository<Joueur, Long>{
     
+    public long countByPartieId(long idPartie);
+    
+    public List<Joueur> findByPartieId(long idPartie);
 }

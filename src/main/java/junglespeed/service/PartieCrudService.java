@@ -5,7 +5,9 @@
  */
 package junglespeed.service;
 
+import java.util.List;
 import junglespeed.entity.Partie;
+import junglespeed.enumeration.StatutPartie;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -14,4 +16,7 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface PartieCrudService extends CrudRepository<Partie, Long>{
     
+    public long countByStatutPartie(StatutPartie statutPartie);
+    
+    public List<Partie> findByStatutPartie(StatutPartie statutPartie);
 }

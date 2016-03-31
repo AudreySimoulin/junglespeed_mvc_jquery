@@ -15,3 +15,52 @@
     border-radius: 15px;
     background-color: lightblue;
 }
+
+.carteD{
+    width: 100px;
+    height: 100px;
+    left: 500px;
+    top: 600px;
+    position: fixed;
+    background-color: black;
+}
+
+.joueurD{
+    left: 480px;
+    top: 710px;
+    position: fixed;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.carteG{
+    width: 100px;
+    height: 100px;
+    right: 500px;
+    top: 600px;
+    position: fixed;
+    background-color: red;
+}
+
+.joueurG{
+    right: 420px;
+    top: 710px;
+    position: fixed;
+    position: fixed;
+    font-family: fantasy;
+    font-weight: bold;
+    font-size: larger;
+}
+
+.totem{
+    margin-top: 200px;
+    text-align: center;
+}
+
+.jeu{
+    background-image: url(../Images/Lovely-Jungle-Wallpaper.jpg);
+    background-position: top center;
+    background-repeat: no-repeat;
+   
+}
