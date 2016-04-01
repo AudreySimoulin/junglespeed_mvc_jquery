@@ -4,7 +4,3 @@
  * and open the template in the editor.
  */
 
-function retournerCartes(){
-    $.get(urlAppli+"retournerCartes"+idPartie);
-}
-

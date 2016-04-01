@@ -16,30 +16,33 @@
         <script src="<c:url value="/JS/partie.js"></c:url>" type="text/javascript"></script>
 <!--        <script type="text/javascript">
                 var refresh = function () {
-                    document.location.reload();
+
+                    $('#zoneCartes').load();
                 }
                 window.setTimeout(refresh, 1000);
         </script>-->
         </head>
-        <body class="jeu" onload="retournerCartes()">
+        <body class="jeu" onload="">
             <div class="totem">
                 <a href=""><img src="<c:url value="/Images/totem.png"></c:url>" alt=""/></a>
             </div>
 
-            <div class="joueurD">
-                Joueur : ${joueur0.nom} <br/>
-            Nombre de cartes : ${joueur0.nbCartes}
-        </div>
+            <div id="zoneCartes">
+                <div class="joueurD">
+                    Joueur : ${joueur0.nom} <br>
+                Nombre de cartes : ${joueur0.nbCartes}
+            </div>
 
-        <div class="carteD" style="background-color: ${joueur0.couleur}">
-        </div>
+            <div class="carteD" style="background-color: ${joueur0.couleur}">
+            </div>
 
-        <div class="joueurG">
-            Joueur : ${joueur1.nom} <br/>
-            Nombre de cartes : ${joueur1.nbCartes} 
-        </div>
+            <div class="joueurG">
+                Joueur : ${joueur1.nom} <br/>
+                Nombre de cartes : ${joueur1.nbCartes} 
+            </div>
 
-        <div class="carteG" style="background-color: ${joueur1.couleur}">
+            <div class="carteG" style="background-color: ${joueur1.couleur}">
+            </div>
         </div>
     </body>
 </html>
